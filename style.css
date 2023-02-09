@@ -63,10 +63,34 @@ button {
   max-width: 100px;
   width: 20%;
   margin: 20px;
-  height: 30px;
-  background-color: rgb(4, 140, 77);
+  height: 35px;
+  background-color: #006c67;
   color: #ffffff;
   border: none;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.display-result {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+  height: 50px;
+  background-color: #ffffff;
+  position: relative;
+  box-shadow: 0px 3px 3px rgb(188, 187, 187);
+  border-radius: 3px;
+}
+.display-cross {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  text-align: center;
+  font-size: 10px;
+  color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0px 3px 3px rgb(149, 148, 148);
 }
