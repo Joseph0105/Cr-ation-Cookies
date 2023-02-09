@@ -32,7 +32,8 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
+  align-self: center;
 }
 
 .input-div {
