@@ -71,8 +71,10 @@ button {
   border-radius: 3px;
   cursor: pointer;
 }
-
 .display-result {
+  display: none;
+}
+.display-card {
   display: flex;
   flex-wrap: wrap;
   width: 30%;
@@ -81,7 +83,6 @@ button {
   position: relative;
   box-shadow: 0px 3px 3px rgb(188, 187, 187);
   border-radius: 3px;
-  display: none;
 }
 .display-cross {
   width: 15px;
