@@ -1,22 +1,15 @@
+const form = document.querySelector("form");
 const displayCookies = document.querySelector(".display-result");
+const errorMsg = document.querySelector(".error-msg");
 
-function getCookie(name) {
-  const cookies = document.cookie.split("; ");
-  const value = cookies.find((c) => c.startsWith(name))?.split("=")[1];
-  if (value === undefined) {
-    return null;
-  } else {
-    return decodeURIComponent(value);
-  }
+const buttonCreat = document.querySelector(".button-creat");
+const inputName = document.querySelector(".input-name");
+const inputValue = document.querySelector(".input-value");
+
+buttonCreat.addEventListener("click", handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const cookieData = inputName.value + inputValue.value;
+  console.log(cookieData);
 }
-function setCookie(name, value, days) {
-  const date = new Date();
-  date.setDate(date.getDate() + days);
-  document.cookie = `${name}=${encodeURIComponent(value)}; expires=${
-    date.toUTCString
-  }`;
-}
-
-setCookie("hello", "Bonjour les gens", 2);
-
-console.log(getCookie("hello"));
