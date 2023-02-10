@@ -11,5 +11,10 @@ buttonCreat.addEventListener("click", handleSubmit);
 function handleSubmit(event) {
   event.preventDefault();
   const cookieData = inputName.value + inputValue.value;
-  console.log(cookieData);
+
+  creatCookie();
+}
+
+function creatCookie(cookieData) {
+  document.cookie = `${inputName.value}=${inputValue.value}`;
 }
