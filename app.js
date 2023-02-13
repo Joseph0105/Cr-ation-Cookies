@@ -37,8 +37,9 @@ function getCookies() {
 }
 
 function displayCookie() {
+  let cookies = getCookies();
+
   displayCookies.style.display = "block";
-  const cookies = getCookies();
   for (const cookieData of cookies) {
     const card = document.createElement("div");
     card.innerHTML = `
@@ -52,15 +53,15 @@ function displayCookie() {
     <div class="display-cross">x</div>
       
     </div>`;
-    console.log(cookiesData);
 
     displayCookies.appendChild(card);
   }
 }
 
-function displayError(cookies) {
-  if (cookies.length === 0) {
-    errorDisplay.textContent = "Aucuns cookies n'a été crée sur ce site.";
+function displayError() {
+  let cookies = document.cookie.split(";");
+  if (cookies[0].trim().length === 0) {
+    errorDisplay.textContent = "Aucuns cookies n'as été créés sur ce site.";
   } else {
     errorDisplay.textContent = "";
   }
@@ -68,7 +69,11 @@ function displayError(cookies) {
 
 async function handleDisplay(e) {
   e.preventDefault();
-  const cookies = getCookies();
-  displayError(cookies);
-  displayCookie(cookies);
+  let cookies = document.cookie.split(";");
+  if (cookies[0].trim().length === 0) {
+    displayError(cookies);
+  } else {
+    displayCookie(cookies);
+  }
+  console.log(cookies);
 }
