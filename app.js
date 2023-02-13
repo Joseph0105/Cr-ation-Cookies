@@ -59,12 +59,7 @@ function displayCookie() {
 }
 
 function displayError() {
-  let cookies = document.cookie.split(";");
-  if (cookies[0].trim().length === 0) {
-    errorDisplay.textContent = "Aucuns cookies n'as été créés sur ce site.";
-  } else {
-    errorDisplay.textContent = "";
-  }
+  errorDisplay.textContent = "Aucuns cookies n'as été créés sur ce site.";
 }
 
 async function handleDisplay(e) {
