@@ -46,10 +46,10 @@ function displayCookie() {
   <div class="display-card">
     <div class="div-card-contain">
     <div class="result-name">
-        <p>Son nom: ${cookieData.name}</p>
+        <p><span>Son nom:</span> ${cookieData.name}</p>
     </div>
     <div class="result-value">
-        <p>Sa valeur: ${cookieData.value}</p>
+        <p><span>Sa valeur:</span> ${cookieData.value}</p>
     </div>
     </div>
     <div class="display-cross">x</div>

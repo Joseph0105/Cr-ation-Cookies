@@ -122,10 +122,15 @@ button {
   justify-content: center;
 }
 .div-card-contain {
-  align-self: center;
+  margin-left: 10px;
 }
 .result-name,
-.result-value p {
+.result-value {
   padding: 3px;
   font-size: 15px;
+  font-weight: 400;
+}
+.result-name span,
+.result-value span {
+  font-weight: 600;
 }
