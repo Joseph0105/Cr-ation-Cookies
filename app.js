@@ -44,11 +44,13 @@ function displayCookie() {
     const card = document.createElement("div");
     card.innerHTML = `
   <div class="display-card">
+    <div class="div-card-contain">
     <div class="result-name">
         <p>Son nom: ${cookieData.name}</p>
     </div>
     <div class="result-value">
         <p>Sa valeur: ${cookieData.value}</p>
+    </div>
     </div>
     <div class="display-cross">x</div>
       
