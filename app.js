@@ -72,3 +72,19 @@ async function handleDisplay(e) {
   }
   console.log(cookies);
 }
+
+function deleteCookie(name) {
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+}
+
+displayCookies.addEventListener("click", (e) => {
+  if (e.target.classList.contains("display-cross")) {
+    const parent = e.target.parentNode;
+    const name = parent
+      .querySelector(".result-name")
+      .textContent.split(":")[1]
+      .trim();
+    deleteCookie(name);
+    parent.remove();
+  }
+});
