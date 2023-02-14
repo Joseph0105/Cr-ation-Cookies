@@ -62,7 +62,7 @@ function displayCookie() {
 
 function displayError() {
   errorDisplay.style.display = "block";
-  errorDisplay.textContent = "Aucuns cookies n'as été créés sur ce site.";
+  errorDisplay.textContent = "Aucun cookie n'a été créé sur ce site.";
 }
 
 async function handleDisplay(e) {
