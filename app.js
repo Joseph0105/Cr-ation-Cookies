@@ -1,3 +1,18 @@
+const inputs = document.querySelectorAll("input");
+
+inputs.forEach((input) => {
+  input.addEventListener("invalid", handleValidation);
+  input.addEventListener("input", handleValidation);
+});
+
+function handleValidation(e) {
+  if (e.type === "invalid") {
+    e.target.setCustomValidity("ce champ ne peut être vide.");
+  } else if (e.type === "input") {
+    e.target.setCustomValidity("");
+  }
+}
+
 const form = document.querySelector("form");
 const displayCookies = document.querySelector(".display-result");
 const errorMsg = document.querySelector(".error-msg");

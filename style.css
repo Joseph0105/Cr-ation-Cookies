@@ -13,19 +13,22 @@ body {
 }
 
 .global-container {
-  margin: clamp(20px, 5vw, 50px);
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  max-width: 600px;
 }
 
 h1 {
   font-weight: 300;
   text-align: center;
   margin: 50px;
+  font-size: 45px;
 }
 
 h1 span {
-  font-weight: 500;
+  font-weight: 600;
+  font-family: Raleway;
 }
 
 form {
@@ -134,3 +137,4 @@ button {
 .result-value span {
   font-weight: 600;
 }
+@import url("./import_code/contact_box.css");
